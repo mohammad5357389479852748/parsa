@@ -1,0 +1,459 @@
+from tkinter import *
+# Tkinter
+name = Tk()
+name.geometry("400x400")
+name.resizable(False, False)
+frm4 = Frame(name)
+ffrm3 = Frame(name)
+mfrm = Frame(name)
+frm3 = Frame(name)
+frm2 = Frame(name)
+frm = Frame(name)
+BIGERfrm = Frame(name)
+frm.place(x=0, y=0, height=400, width=400)
+photo = PhotoImage(master=name, file="c:/Users/parsa/Desktop/1111.png")
+lblPic1 = Label(frm, image=photo)
+lblPic2 = Label(frm2, image=photo)
+lblPic3 = Label(frm3, image=photo)
+
+StrSize = StringVar()
+
+#### شهرک دف های سیب مازندران
+def back_():
+    BIGERfrm.place_forget()
+    frm.place(x=0, y=0, height=400, width=400)
+def FIND():
+    frm.place_forget()
+    BIGERfrm.place(x=0, y=0, height=400, width=400)
+def updates_():
+    frm.place_forget()
+    frm4.place(x=0, y=0, height=400, width=400)
+def reset_():
+    ShowerButton.configure(font="calibri 0 bold")
+    lblName.configure(font="calibri 0 bold")
+    lblPassword.configure(font="calibri 0 bold")
+    lblTitle.configure(font="calibri 30 bold")
+    EntName.configure(font="calibri 0 bold")
+    EntPassword.configure(font="calibri 0 bold")
+    QuitButton.configure(font="calibri 0 bold")
+    SettingsButton.configure(font="calibri 0 bold")
+    EnterButton.configure(font="calibri 15 bold")
+def resize_():
+    ShowerButton.configure(font="calibri %s bold" % StrSize.get())
+    lblName.configure(font="calibri %s bold" % StrSize.get())
+    lblPassword.configure(font="calibri %s bold" % StrSize.get())
+    lblTitle.configure(font="calibri %s bold" % StrSize.get())
+    EntName.configure(font="calibri %s bold" % StrSize.get())
+    EntPassword.configure(font="calibri %s bold" % StrSize.get())
+    QuitButton.configure(font="calibri %s bold" % StrSize.get())
+    SettingsButton.configure(font="calibri %s bold" % StrSize.get())
+    EnterButton.configure(font="calibri %s bold" % StrSize.get())
+    CHANGEfont.configure(command=ITALIC_)
+    lblfont.configure(text="Font  <changed bold>")
+def classic_():
+    name.config(bg="#f7ffde")
+    frm.config(bg="#f7ffde")
+    frm2.config(bg="#f7ffde")
+    frm3.config(bg="#f7ffde")
+    ffrm3.config(bg="#f7ffde")
+    mfrm.config(bg="#f7ffde")
+    WHITE.configure(state="active")
+    RED.configure(state="active")
+    BLUE.configure(state="active")
+    YELLOW.configure(state="active")
+    classicButton.configure(state="disabled")
+def bold_():
+    ShowerButton.configure(font="calibri 0 bold")
+    lblName.configure(font="calibri 0 bold")
+    lblPassword.configure(font="calibri 0 bold")
+    lblTitle.configure(font="calibri 30 bold")
+    EntName.configure(font="calibri 0 bold")
+    EntPassword.configure(font="calibri 0 bold")
+    QuitButton.configure(font="calibri 0 bold")
+    SettingsButton.configure(font="calibri 0 bold")
+    EnterButton.configure(font="calibri 15 bold")
+    CHANGEfont.configure(command=ITALIC_)
+    lblfont.configure(text="Font  <bold>")
+def ITALIC_():
+    ShowerButton.configure(font="calibri 0 italic")
+    lblName.configure(font="calibri 0 italic")
+    lblPassword.configure(font="calibri 0 italic")
+    lblTitle.configure(font="calibri 30 italic")
+    EntName.configure(font="calibri 0 italic")
+    EntPassword.configure(font="calibri 0 italic")
+    QuitButton.configure(font="calibri 0 italic")
+    SettingsButton.configure(font="calibri 0 italic")
+    EnterButton.configure(font="calibri 15 italic")
+    lblfont.configure(text="Font  <italic>")
+    CHANGEfont.configure(command=BOLDitalic_)
+def BOLDitalic_():
+    ShowerButton.configure(font="calibri 0 bold italic")
+    lblName.configure(font="calibri 0 bold italic")
+    lblPassword.configure(font="calibri 0 bold italic")
+    lblTitle.configure(font="calibri 30 bold italic")
+    EntName.configure(font="calibri 0 bold italic")
+    EntPassword.configure(font="calibri 0 bold italic")
+    QuitButton.configure(font="calibri 0 bold italic")
+    SettingsButton.configure(font="calibri 0 bold italic")
+    EnterButton.configure(font="calibri 15 bold italic")
+    CHANGEfont.configure(command=Constantia_)
+    lblfont.configure(text="Font  <bold & italic>")
+def default_():
+    ShowerButton.configure(font="calibri 0")
+    lblName.configure(font="calibri 0")
+    lblPassword.configure(font="calibri 0")
+    lblTitle.configure(font="calibri 30")
+    EntName.configure(font="calibri 0")
+    EntPassword.configure(font="calibri 0")
+    QuitButton.configure(font="calibri 0")
+    SettingsButton.configure(font="calibri 0")
+    EnterButton.configure(font="calibri 15") 
+    CHANGEfont.configure(command=bold_)
+    lblfont.configure(text="Font  <default>")
+def Constantia_():
+    ShowerButton.configure(font="Constantia")
+    lblName.configure(font="Constantia")
+    lblPassword.configure(font="Constantia")
+    lblTitle.configure(font="Constantia 30")
+    EntName.configure(font="Constantia")
+    EntPassword.configure(font="Constantia")
+    QuitButton.configure(font="Constantia")
+    SettingsButton.configure(font="Constantia") 
+    EnterButton.configure(font="Constantia 15") 
+    CHANGEfont.configure(command=default_)
+    lblfont.configure(text="Font  <classic>")
+
+def photoOff_():
+    lblPic1.place_forget()
+    lblPic2.place_forget()
+    lblPic3.place_forget()
+    YELLOW.configure(state="active")
+    WHITE.configure(state="active")
+    RED.configure(state="active")
+    BLUE.configure(state="active")
+    classicButton.configure(state="active")
+    BtOn.configure(state="active")
+    BtOff.configure(state="disabled")
+def photoimage_():
+    lblPic1.place(x=0, y=0, width=400, height=400)
+    lblPic2.place(x=0, y=0, width=400, height=400)
+    lblPic3.place(x=0, y=0, width=400, height=400)
+    YELLOW.configure(state="disabled")
+    WHITE.configure(state="disabled")
+    RED.configure(state="disabled")
+    BLUE.configure(state="disabled")
+    classicButton.configure(state="disabled")
+    BtOff.configure(state="active")
+    BtOn.configure(state="disabled")
+    
+def gray_():
+    name.config(bg="gray")
+    frm.config(bg="gray")
+    frm2.config(bg="gray")
+    frm3.config(bg="gray")
+    ffrm3.config(bg="gray")
+    mfrm.config(bg="gray")
+    WHITE.configure(state="disabled")
+    RED.configure(state="active")
+    BLUE.configure(state="active")
+    YELLOW.configure(state="active")
+    classicButton.configure(state="active")
+def red_():
+    name.config(bg="red")
+    frm.config(bg="red")
+    frm2.config(bg="red")
+    frm3.config(bg="red")
+    ffrm3.config(bg="red")
+    mfrm.config(bg="red")
+    WHITE.configure(state="active")
+    RED.configure(state="disabled")
+    BLUE.configure(state="active")
+    YELLOW.configure(state="active")
+    classicButton.configure(state="active")
+def blue_():
+    name.config(bg="blue")
+    frm.config(bg="blue")
+    frm2.config(bg="blue")
+    frm3.config(bg="blue")
+    ffrm3.config(bg="blue")
+    mfrm.config(bg="blue")
+    WHITE.configure(state="active")
+    RED.configure(state="active")
+    BLUE.configure(state="disabled")
+    YELLOW.configure(state="active")
+    classicButton.configure(state="active")
+def yellow_():
+    name.config(bg="yellow")
+    frm.config(bg="yellow")
+    frm2.config(bg="yellow")
+    frm3.config(bg="yellow")
+    ffrm3.config(bg="yellow")
+    mfrm.config(bg="yellow")
+    WHITE.configure(state="active")
+    RED.configure(state="active")
+    BLUE.configure(state="active")
+    YELLOW.configure(state="disabled")
+    classicButton.configure(state="active")
+def turkey_():
+    lblTitle.configure(fg="orange")
+    lblName.configure(text="isim")
+    lblPassword.configure(text="sifre")
+    SettingsButton.configure(text="Ayarlar")
+    QuitButton.configure(text="cikis")
+    lblTitle.configure(text="Hos geldin!")
+    EnterButton.configure(text="girmek")
+def persion_():
+    lblTitle.configure(fg="green")
+    lblName.configure(text="نام")
+    lblPassword.configure(text="رمز ورود")
+    SettingsButton.configure(text="تنظیمات")
+    QuitButton.configure(text="خروج")
+    lblTitle.configure(text="!خوش امدید", underline=6)
+    EnterButton.configure(text="ورود")
+def arabic_():
+    lblTitle.configure(fg="blue")
+    lblName.configure(text="اسم")
+    lblPassword.configure(text="کلمته الرور")
+    SettingsButton.configure(text="اعدادات")
+    QuitButton.configure(text="مخرج")
+    lblTitle.configure(text="!مرحبا")
+    EnterButton.configure(text="یدخل")
+def english_():
+    lblTitle.configure(fg="red")
+    lblName.configure(text="Name")
+    lblPassword.configure(text="Password")
+    SettingsButton.configure(text="Settings")
+    QuitButton.configure(text="Quit")
+    lblTitle.configure(text="Welcome!")
+    EnterButton.configure(text="enter")
+def settings_():
+    frm.place_forget()
+    ffrm3.place(x=0, y=0, height=90, width=400)
+    frm3.place(x=0, y=100, height=400, width=400)
+    mfrm.place(x=0, y=60, width=600, height=40)
+def cick_():
+    frm3.place_forget()
+    frm.place(x=0, y=0, height=400, width=400)
+    mfrm.place_forget()
+    ffrm3.place_forget()
+def quit_():
+    name2 = Toplevel()
+    name2.geometry("200x80")
+    name2.resizable(False, False)
+    LblAsk = Label(name2, text="Are you sure to quit?")
+    LblAsk.pack()
+    YesBtn = Button(name2, text="Yes", bg="green", command=quit)
+    YesBtn.place(x=50, y=30)
+    btques = Label(name2, bitmap="question")
+    btques.place(x=170, y=0, height=50)
+    NoBtn = Button(name2, text="No", bg="red", command=name2.destroy)
+    NoBtn.place(x=110, y=30)
+def show_():
+    EntPassword.configure(show=StrPassword.get())
+    ShowerButton.configure(text="off", bg="red", command=unshow_)
+def unshow_():
+    EntPassword.configure(show="*")
+    ShowerButton.configure(text="on", bg="green", command=show_)
+def Acount_():
+    EntPassword.configure(textvariable=StrPassword)
+    frm.place_forget()
+    frm2.place(x=0, y=0, height=400, width=400)
+    # Title Of acount
+    LblAcountTitle = Label(frm2, text="-Your acount-", fg="dark blue", font="calibri 30")
+    LblAcountTitle.place(x=90, y=20)
+    Name = Label(frm2, text="Name", font="calibri 20 bold", fg="dark blue")
+    Name.place(x=90, y=150)
+    Password = Label(frm2, text="Password", font="calibri 20 bold", fg="dark blue")
+    Password.place(x=50, y=250)
+    AcountName = Label(frm2, text=StrName.get(), font="calibri 15 bold", fg="dark red")
+    AcountName.place(x=250, y=155)
+    AcountPassword = Label(frm2, text="ERROR:PYTHON ERROR", font="calibri 15 bold", fg="dark red")
+    AcountPassword.place(x=250, y=250)
+    DoneButton = Button(frm2, text="OK and quit", command=quit, bd=1, bg="yellow")
+    DoneButton.place(x=160, y=330, height=50, width=100)
+    ReturnButton = Button(frm2, text="Return Acount", fg="sky blue", bd=0, command=return_)
+    ReturnButton.place(x=0, y=20)
+def return_():
+    frm2.place_forget()
+    frm.place(x=0, y=0, width=400, height=400)
+    EntName.delete(0,END)
+    EntPassword.delete(0,END)
+    lblTitle.configure(text="welcome back!")
+    lblTitle.place_forget()
+    lblTitle.place(x=75, y=20)
+DEFIND_frm = Frame(name)
+trys = 0
+count = 0
+# متاسفانه پایتون نمی تواند این قسمت بسیار مهم را اجرا کند
+def end():
+    while True :
+        if Name.get() == listname[count] :
+            if Password.get() == listpassword[count] :
+                BIGERfrm.place_forget()
+                DEFIND_frm.place(x=0, y=0, height=400, width=400)
+            else :
+                name.destroy()
+"اما میتوانم این بخش را بدون گرافیک تکینتر برایتان اجرا کنم"
+def end2():
+    while True :
+        if Name.get() == listname[count] :
+            if Password.get() == listpassword[count] :
+                print(f"""!!!! Welcome to your acount !!!!
+                      
+                      name : {Name.get()}
+
+
+password : {Password.get()}""")
+################ به اتمام رسیدن شهرک
+    
+
+# BTN up
+btn = Button(frm, text="v:0.7", command=updates_)
+btn.place(x=2, y=35)
+# Mini Frame
+lblfont = Label(mfrm, text="Font  <Default>")
+lblfont.place(x=20, y=15)
+CHANGEfont = Button(mfrm, text="Change", bd=1, command=bold_)
+CHANGEfont.place(x=145, y=15)
+# Title
+lblTitle = Label(frm, text="Welcome!", font="calibri 30", underline=1, fg="red")
+lblTitle.place(x=125, y=20)
+# Name Text
+lblName = Label(frm, text="Name", font="calibri 0 bold", fg="gray")
+lblName.place(x=125, y=125)
+# Password Text
+lblPassword = Label(frm, text="Password", font="calibri 0 bold", fg="gray")
+lblPassword.place(x=100, y=200)
+# For Save
+StrName = StringVar()
+StrPassword = StringVar()
+# Name Enter
+EntName = Entry(frm, textvariable=StrName, font="calibri 0", fg="gray")
+# Password Enter
+EntPassword = Entry(frm, textvariable=StrPassword.get(), font="calibri 0", fg="gray", show="*")
+# Place Of Enters
+EntName.place(x=185, y=130)
+EntPassword.place(x=185, y=205)
+# Enter Button
+EnterButton = Button(frm, text="enter", font="calibri 15", bd=3, command=Acount_, fg="gray")
+EnterButton.place(x=150, y=275, height=85, width=150)
+# Quit Button
+QuitButton = Button(frm, text="quit", font="calibri 0", fg="gray", command=quit_)
+QuitButton.place(x=2, y=2)
+# Settings Button
+SettingsButton = Button(frm, text="settings", font="calibri 0", fg="gray", command=settings_)
+SettingsButton.place(x=332, y=2)
+# ShowerButton
+ShowerButton = Button(frm, text="on", bg="green", command=show_)
+ShowerButton.place(x=350, y=205)
+# Settings
+LblSettings = Label(ffrm3, text="settings", fg="brown", underline=1, font="calibri 30 bold")
+LblSettings.place(x=130, y=0)
+FP = Scale(frm3, from_=0, to=100, orient=HORIZONTAL, length=200, variable=StrSize)
+FP.place(x=50, y=23)
+LblSizer = Label(frm3, text="size", font="calibri 0")
+LblSizer.place(x=20, y=40)
+Language = Label(frm3, text="Language", font="calibri 0 bold")
+Language.place(x=20, y=160)
+Btn1 = Button(frm3, text="eng", command=english_)
+Btn1.place(x=100, y=160)
+Btn2 = Button(frm3, text="فا", command=persion_)
+Btn3 = Button(frm3, text="عرب", command=arabic_)
+Btn3.place(x=150, y=160)
+Btn2.place(x=130, y=160)
+Btn4 = Button(frm3, text="Tur", command=turkey_)
+Btn4.place(x=180, y=160)
+Quit_Setting = Button(ffrm3, text="<-", command=cick_)
+Quit_Setting.place(x=2, y=2)
+IMageLBL = Label(frm3, text="Image")
+IMageLBL.place(x=20, y=102)
+BtOn = Button(frm3, text="on", command=photoimage_)
+BtOn.place(x=100, y=100)
+BtOff = Button(frm3, text="off", command=photoOff_, state="disabled")
+BtOff.place(x=125, y=100)
+colorLbl = Label(frm3, text="color")
+colorLbl.place(x=20, y=203)
+RED = Button(frm3, text="red", fg="red", command=red_)
+RED.place(x=60, y=200)
+BLUE = Button(frm3, text="blue", fg="blue", command=blue_)
+BLUE.place(x=85, y=200)
+YELLOW = Button(frm3, text="yellow", fg="yellow", command=yellow_)
+YELLOW.place(x=120, y=200)
+WHITE = Button(frm3, text="gray",fg="gray",  command=gray_)
+WHITE.place(x=160, y=200)
+OkButton = Button(frm3, text="resize", bd=5, command=resize_)
+OkButton.place(x=300, y=38)
+classicButton = Button(frm3, text="classic", bg="#f7ffde", command=classic_)
+classicButton.place(x=190, y=200)
+reset = Button(frm3, text="reset", command=reset_)
+reset.place(x=350, y=41)
+lbl = Button(frm, text="Have acount?", fg="blue", bd=0, command=FIND)
+lbl.place(x=5, y=375)
+# BIGER frm
+# EntName.place(x=185, y=130)
+# EntPassword.place(x=185, y=205)
+
+Name = StringVar()
+Password = StringVar()
+listname = ["mohammad", "ali", "hassan"]
+listpassword = ["123", "456", "789"]
+Enter = Entry(BIGERfrm, textvariable=Name)
+Enter2 = Entry(BIGERfrm, textvariable=Password)
+LBL = Label(BIGERfrm, text="Name")
+LBL2 = Label(BIGERfrm, text="Password")
+Enter.place(x=185, y=130)
+Enter2.place(x=185, y=205)
+LBL.place(x=142, y=130)
+LBL2.place(x=130, y=205)
+ENTER = Button(BIGERfrm, text="FindACOUNT", bd=10, font="calibri 20 bold", command=end2)
+ENTER.place(x=120, y=260)
+quitbtn = Button(BIGERfrm, text="<-", command=back_)
+quitbtn.place(x=2, y=2)
+LANGUAGE1 = Button(BIGERfrm, text="فارسی")
+LANGUAGE1.place(x=10, y=110)
+LANGUAGE2 = Button(BIGERfrm, text="English")
+LANGUAGE2.place(x=10, y=140)
+LANGUAGE3 = Button(BIGERfrm, text="العربیه")
+LANGUAGE3.place(x=10, y=170)
+LANGUAGE4 = Button(BIGERfrm, text="Turkish")
+LANGUAGE4.place(x=10, y=200)
+lb = Label(BIGERfrm, text="! Find !", font="Constantia 40")
+lb.place(x=120, y=30)
+labl2 = Label(DEFIND_frm, text="Welcome to your acount !!! ", font="Constantia 30 bold")
+labl1 = Message(DEFIND_frm, text="""...""")
+labl2.place(x=80, y=20)
+btn32 = Button(BIGERfrm, text="Python is not responding, I cant get you your acount,,, bye bye :/", fg="blue", bd=0)
+btn32.place(x=0, y=350)
+# Frame 4
+frm4 = Scrollbar()
+lbl = Message(frm4, text="""0.1 :
+              The first version, just 2 enter...
+              and one button command of button is quit.
+              
+              0.2 :
+              Have Quit Button.
+              
+              0.3
+              If you choose quit, ask question :
+              are you sure to quit??
+              Have shower password button!
+              (but it havent window and no btn have error.)
+              
+              0.4
+              Have change language! ENG and PERSION.
+              
+              0.5
+              Language : Have language Arabc & turkey
+              Have quit with window
+              Have window command enter.
+              
+              0.6
+              Have Frame settings and enter.
+
+              0.7
+              Have Colors, background, 
+              Font, size font in settings. 
+              """)
+lbl.place(x=10, y=10)
+# Open Window
+name.mainloop()
